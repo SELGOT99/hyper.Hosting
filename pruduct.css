@@ -1,0 +1,142 @@
+body {
+  direction: rtl;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000000; /* خلفية سوداء */
+  color: #c9d1d9;
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-shadow: 0 0 3px #8ec7ff; /* ظل أزرق خفيف */
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #121b28; /* أزرق غامق */
+  box-shadow: 0 0 8px #74a9ff; /* ظل أزرق فاتح */
+  border-radius: 8px;
+  color: #9ec6ff;
+  text-shadow: 0 0 6px #74a9ff;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 2rem;
+  color: #9ec6ff;
+  text-shadow: 0 0 8px #74a9ff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo::before {
+  content: "🖥️";
+  font-size: 2.2rem;
+}
+
+nav button.cta-button {
+  background: linear-gradient(45deg, #6aa0ff, #8cbaff);
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 6px #8cbaff;
+  transition: box-shadow 0.3s ease;
+}
+
+nav button.cta-button:hover {
+  box-shadow: 0 0 15px #abc9ff;
+  background: linear-gradient(45deg, #8cbaff, #abc9ff);
+}
+
+.plans {
+  display: flex;
+  gap: 40px; /* مسافة بين الخطط */
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.plan {
+  background: #14305a; /* أزرق غامق */
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 300px;
+  box-shadow: 0 0 20px #6aa0ff;
+  color: #c3d6ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 0 0 3px #6aa0ff;
+}
+
+.plan:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px #abc9ff;
+}
+
+.plan h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #abc9ff;
+  text-shadow: 0 0 10px #8cbaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.plan h2::before {
+  content: "⚡";
+  font-size: 1.8rem;
+  color: #abc9ff;
+}
+
+.plan li {
+  margin: 12px 0;
+  list-style: none;
+  font-size: 1.1rem;
+  text-shadow: 0 0 2px #8cbaff;
+}
+
+.plan p {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #8cbaff;
+  text-shadow: 0 0 8px #abc9ff;
+}
+
+.plan a.cta-button {
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(45deg, #6aa0ff, #8cbaff);
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 0 10px #8cbaff;
+  transition: box-shadow 0.3s ease;
+}
+
+.plan a.cta-button:hover {
+  box-shadow: 0 0 20px #abc9ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plans {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .plan {
+    max-width: 90%;
+  }
+}

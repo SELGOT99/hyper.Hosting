@@ -1,0 +1,65 @@
+body {
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #58a6ff;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: rgba(88, 166, 255, 0.1);
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 4px 10px rgba(88, 166, 255, 0.3);
+  user-select: none;
+  position: relative;
+  z-index: 1;
+}
+
+/* التأثير ديال الزووم عند hover فقط في الكمبيوتر */
+.gallery img:hover:not(.zoomed) {
+  transform: scale(2.5);
+  box-shadow: 0 10px 40px rgba(88, 166, 255, 0.9);
+  z-index: 20;
+}
+
+/* التأثير ديال الزووم عند إضافة الكلاس zoomed (عند الضغط) */
+.gallery img.zoomed {
+  transform: scale(2.5);
+  box-shadow: 0 10px 40px rgba(88, 166, 255, 0.9);
+  z-index: 20;
+}
+
+@media (max-width: 600px) {
+  .gallery img {
+    width: 120px;
+    height: 120px;
+  }
+  .gallery img:hover:not(.zoomed) {
+    transform: scale(1.8);
+  }
+  .gallery img.zoomed {
+    transform: scale(1.8);
+  }
+}
