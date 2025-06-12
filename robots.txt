@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://selgot99.github.io/HyperHosting/sitemap.xml
