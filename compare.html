@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>مقارنة بين الخطط</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #004080;
+      margin-top: 40px;
+      font-size: 2.2em;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 30px auto;
+      padding: 0 15px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideFadeIn 1.5s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      min-width: 600px;
+    }
+
+    th, td {
+      border: 1px solid #eee;
+      padding: 14px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #006699;
+      color: white;
+      font-size: 1.1em;
+    }
+
+    td:first-child {
+      background-color: #f8f8f8;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #fcfcfc;
+    }
+
+    .check {
+      color: green;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .plan-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .plan-button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 700px) {
+      table {
+        font-size: 14px;
+        min-width: 100%;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>مقارنة بين الخطط</h1>
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>الميزة</th>
+        <th>Basic<br><a href="#" class="plan-button">اطلب الآن</a></th>
+        <th>Pro<br><a href="#" class="plan-button">اطلب الآن</a></th>
+        <th>Ultra<br><a href="#" class="plan-button">اطلب الآن</a></th>
+      </tr>
+      <tr>
+        <td>السعر الشهري</td>
+        <td>DH 20</td>
+        <td>DH 30</td>
+        <td>DH 60</td>
+      </tr>
+      <tr>
+        <td>عدد المواقع</td>
+        <td>1</td>
+        <td>3</td>
+        <td>غير محدود</td>
+      </tr>
+      <tr>
+        <td>حجم التخزين</td>
+        <td>512 MB DDR4</td>
+        <td>512MB DDR4</td>
+        <td>1GB DDR5</td>
+      </tr>
+      <tr>
+        <td>SSL مجاني</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>دعم فني</td>
+        <td>8 ساعة</td>
+        <td>24 ساعة</td>
+        <td>مميز 24/7</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
